@@ -26,7 +26,7 @@ function renderBooks(myBook) {
 
    main.appendChild(h2)
     let nameJson = myArr1[4].name
-  h2.appendChild(nameJson)
+  h2.innerHTML = nameJson
    let myArr2 = JSON.stringify(myArr1)
 
 
