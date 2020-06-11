@@ -7,7 +7,7 @@ fetch(URLA)
   .then(json  => {
     renderBooks(json)
     //console.log(json);
-        
+
 })
 .catch(Error =>console.log(Error))
 }
@@ -20,15 +20,14 @@ function renderBooks(myBook) {
   myBook.forEach(book => {
     myArr1.push(book)
     //console.log(myBook)
-   
+
   })
       const h2 = document.createElement('h2')
 
    main.appendChild(h2)
     let nameJson = myArr1[4].name
-  h2.appendChild(nameJson)  
+  h2.appendChild(nameJson)
    let myArr2 = JSON.stringify(myArr1)
 
 
 }
-
