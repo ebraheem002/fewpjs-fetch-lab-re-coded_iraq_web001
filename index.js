@@ -1,16 +1,33 @@
-function fetchBooks() {
+const URLA = 'https://anapioficeandfire.com/api/books'
+let main =  document.getElementsByClassName('main')[0]
 
-}
-
-function renderBooks(json) {
-  const main = document.querySelector('main')
-  json.forEach(book => {
-    const h2 = document.createElement('h2')
-    h2.innerHTML = `<h2>${book.name}</h2>`
-    main.appendChild(h2)
-  })
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  fetchBooks()
+function fetchBooks(){
+fetch(URLA)
+  .then(response => response.json())
+  .then(json  => {
+    renderBooks(json)
+    //console.log(json);
+        
 })
+.catch(Error =>console.log(Error))
+}
+fetchBooks()
+  //const main = document.querySelector('main')
+
+const myArr1 = []
+function renderBooks(myBook) {
+ // console.log(myBook)
+  myBook.forEach(book => {
+    myArr1.push(book)
+    //console.log(myBook)
+   
+  })
+      const h2 = document.createElement('h2')
+
+   main.appendChild(h2)
+    let nameJson = myArr1[4].name
+   let myArr2 = JSON.stringify(myArr1)
+
+
+}
+
